@@ -1,11 +1,86 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-<meta charset="utf-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Normal Webpage</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css" />
+    <style>
+    </style>
 </head>
 <body>
-<h1>Games</h1>
-<a href="/ball-game">Ball Game</a>
-<small>Not finished yet...</small>
+    <section id="part0">
+        <div class="shade"></div>
+        <img class="superman" src="./images/superman.png" alt=""/>
+        <div class="upper">
+            <h1>“Almost a Hero *”</h1>
+            <div class="left">
+                <h2>Who am I?</h2>
+                <p>A cutie from an unknown space -- <b>NaitLee</b>.</p>
+                <p>
+                    Many softwares have a newest type of build called "<b>Nightly</b>",
+                    It is though, unstable, but always growing, shining future with the lightest possibility.
+                </p>
+            </div>
+            <div class="right">
+                <h2>Almost, period.</h2>
+                <p>Not always, but try my best, making the world better.</p>
+                <p>
+                    <b>Check out:</b><br />
+                    <a href="https://github.com/NaitLee/Takeback-HFS-Template">Takeback Template for HFS</a><br />
+                    <a href="https://github.com/NaitLee/i18-N.js-Lite">i18n.js-lite Localization Script</a><br />
+                    <a href="https://github.com/NaitLee/ball-game">A Simple Ball Game</a><br />
+                    <a href="https://github.com/fahad15090/fstrmproj">Fun Stream Project (Co-work)</a><br />
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="part1">
+        <h1>Skills?</h1>
+        <div class="upper">
+            <img class="left" src="./images/playing.png" alt="" />
+            <p class="right">
+                <span><i>“Practice makes perfect.”</i></span>
+                <meter class="meter_coding" min="0" max="100" step="1" value="90"></meter>
+                <span>Coding: 90%</span>
+                <meter class="meter_computer" min="0" max="100" step="1" value="75"></meter>
+                <span>Computer: 75%</span>
+                <meter class="meter_designing" min="0" max="100" step="1" value="50"></meter>
+                <span>Designing: 50%</span>
+                <span>... And others like creating games etc.</span>
+            </p>
+        </div>
+    </section>
+    <section id="part2">
+        <h1>Want to play with me?</h1>
+        <h2>Contact!</h2>
+        <p>
+            E-mail: <a href="mailto:naitli@foxmail.com">naitli@foxmail.com</a><br />
+        </p>
+    </section>
+    <section id="part3">
+        <p><small>Copyright &copy; 2020-2021 NaitLee Soft, some rights reserved.</small></p>
+        <div class="shade"></div>
+    </section>
+    <noscript>
+        <style>
+            #part0 .superman {
+                opacity: 1;
+                left: 0;
+                top: 0;
+                width: 20em;
+            }
+        </style>
+    </noscript>
+    <script>
+        setTimeout(() => {
+            let man = document.querySelector('.superman');
+            man.style.opacity = '1';
+            man.style.left = '0';
+            man.style.top = '0';
+            man.style.width = '20em';
+        }, 1000);
+    </script>
 </body>
 </html>
