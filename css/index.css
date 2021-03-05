@@ -71,16 +71,6 @@ body {
 #part1 p {
     width: 100%;
 }
-#part1 p meter {
-    width: 80%;
-    display: block;
-    margin: auto;
-    height: 1em;
-}
-#part1 p span {
-    display: block;
-    margin-bottom: 1em;
-}
 #part1 .upper {
     display: flex;
     flex-wrap: wrap;
@@ -91,6 +81,9 @@ body {
     max-width: 20em;
 }
 #part1 .upper .right {
+    max-width: 36em;
+}
+#part1 .upper .right img {
     max-width: 36em;
 }
 #part2 {
@@ -106,4 +99,9 @@ body {
     position: relative;
     background-image: linear-gradient(transparent, rgb(85, 153, 255));
     height: 12em;
+}
+@media (max-width: 950px) {
+    #part1 .upper .right img {
+        max-width: 18em;
+    }
 }
