@@ -122,6 +122,10 @@ body {
 #part1 .left a, #part1 .right a {
     display: block;
 }
+#part1 .left p, #part1 .right p {
+    color: #a552d6;
+    font-size: 0.9em;
+}
 #part1 .line {
     border-bottom: 2px solid #a552d6;
     width: 60%;
