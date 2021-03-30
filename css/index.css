@@ -8,6 +8,22 @@ body {
     text-align: center;
     font-size: 1.2em;
 }
+h1 {
+    margin: 0;
+    padding: 0.5em 0;
+}
+section {
+    overflow-x: hidden;
+}
+#background {
+	background: center / cover;
+    background-color: white;
+    background-image: url('../images/family.png');
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
 a:link, a:visited, abbr {
     color: #a552d6;
 }
@@ -17,10 +33,13 @@ a:hover, a:active {
 a {
     transition: all 0.3s;
 }
+#part0 {
+    overflow-y: hidden;
+}
 #part0 .shade {
     width: 100%;
     height: 24em;
-    background-image: linear-gradient(rgb(85, 153, 255), transparent);
+    /* background-image: linear-gradient(rgb(85, 153, 255), transparent); */
     position: absolute;
 }
 @keyframes fly {
@@ -35,6 +54,11 @@ a {
         top: 0;
     }
 }
+#part0 .upper {
+    position: relative;
+    height: 24em;
+    overflow-y: visible;
+}
 #part0 .superman {
     opacity: 0;
     position: relative;
@@ -42,35 +66,49 @@ a {
     width: 20em;
     animation: fly 1s ease-in-out 1s forwards;
 }
-#part0 .upper {
-    position: relative;
-    top: -12em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+@keyframes join {
+    from {
+        transform: scaleX(1.5);
+        opacity: 0;
+    }
+    to {
+        transform: unset;
+        opacity: 1;
+    }
 }
 #part0 .upper h1 {
     font-size: 2em;
     color: #a552d6;
     width: 100%;
     padding: 1em 0;
+    position: relative;
+    top: -6em;
+    opacity: 0;
     background-image: linear-gradient(transparent 0%, white 33%, white 67%, transparent 100%);
+    animation: join 1s ease-in-out 1s forwards;
 }
-#part0 .upper .left {
+#part0 .lower {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+}
+#part0 .lower .left {
     background-color: transparent;
     /* height: 8em; */
     max-width: 24em;
     text-align: left;
     margin: 1em;
 }
-#part0 .upper .left h2 {
+#part0 .lower .left h2 {
     color: #df046f;
 }
-/* #part0 .upper .left p {
+/* #part0 .lower .left p {
     font-style: italic;
 } */
-#part0 .upper .right {
+#part0 .lower .right {
     /* background-color: #df046f; */
     background-color: #a552d6;
     color: white;
@@ -79,18 +117,17 @@ a {
     margin: 1em;
     padding: 1em;
 }
-#part0 .upper .right a {
+#part0 .lower .right a {
     color: white;
 }
 #part1 {
     overflow: hidden;
-}
-#part1 h1 {
-    color: #df046f;
+    /* text-shadow: 0 0 6px white; */
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
 }
 #part1 h2 {
     font-size: 1.2em;
-    color: #a552d6;
 }
 @keyframes swing {
     0% {
@@ -107,6 +144,13 @@ a {
     text-decoration: none;
     font-size: 1.28em;
 }
+#part1 a:link, #part1 a:visited {
+    color: white;
+}
+#part1 a:hover, #part1 a:active {
+    color: #333333;
+    background-color: white;
+}
 #part1 a::after {
     content: " >>";
     position: relative;
@@ -122,19 +166,20 @@ a {
     padding: 2em;
 }
 #part1 .left a, #part1 .right a {
-    display: block;
+    display: inline-block;
+    padding-right: 1em;
 }
 #part1 .left p, #part1 .right p {
-    color: #a552d6;
     font-size: 0.9em;
 }
 #part1 .line {
-    border-bottom: 2px solid #a552d6;
+    border-bottom: 2px solid white;
     width: 60%;
     display: inline-block;
 }
 #part2 {
-    position: relative;
+    background-color: white;
+    padding: 2em 0;
 }
 #part2 h1 {
     color: #df046f;
@@ -150,7 +195,7 @@ a {
     max-width: 50em;
 }
 #part3 {
-    position: relative;
+    text-align: center;
 }
 #part3 h1 {
     color: #df046f;
@@ -158,7 +203,13 @@ a {
 #part3 h2 {
     color: #a552d6;
 }
-#part3 div * {
+#part3 .box {
+    background-color: white;
+    display: inline-block;
+    padding: 2em 3em;
+    margin: 2em 0;
+}
+#part3 div div * {
     padding: 0.5em 1em;
 }
 #part4 {
@@ -167,7 +218,7 @@ a {
 }
 #part4 .shade {
     position: relative;
-    background-image: linear-gradient(transparent, rgb(85, 153, 255));
+    /* background-image: linear-gradient(transparent, rgb(85, 153, 255)); */
     height: 12em;
 }
 @media (max-width: 950px) {
