@@ -66,6 +66,9 @@ a {
     width: 20em;
     animation: fly 1s ease-in-out 1s forwards;
 }
+#part0 .superman:hover {
+    transform: translate(3em, -1em);
+}
 @keyframes join {
     from {
         transform: scaleX(1.5);
@@ -193,6 +196,10 @@ a {
 }
 #part2 .upper img {
     max-width: 50em;
+    transition: all 3s;
+}
+#part2 .upper img:hover {
+    transform: scale(0.9);
 }
 #part3 {
     text-align: center;
