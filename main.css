@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #8aceff;
+    color: #333333;
+    overflow-x: hidden;
+    /* font-weight: bold; */
+}
+
+a:link, a:visited, a:hover, a:active {
+    color: #333333;
+}
+
+@keyframes background-move {
+    0% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(20px, -20px);
+    }
+}
+
+.background {
+    position: fixed;
+    z-index: -2;
+    background-color: #8aceff;
+    top: 0px;
+    left: -20px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background-image:
+        repeating-linear-gradient(90deg, #8aceff 0px, #8aceff 10px, rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0) 20px),
+        repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 10px, #8aceff 10px, #8aceff 20px),
+        repeating-linear-gradient(0deg, #9f92ff 0px, #9f92ff 10px, rgba(0, 0, 0, 0) 10px, rgba(0, 0, 0, 0) 20px);
+    animation: background-move 2s linear 0s infinite;
+}
+.background-mask {
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+.mask-section-light {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #333333;
+}
+.mask-section-dark {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+}
+.mask-section-light a:link,
+.mask-section-light a:visited,
+.mask-section-light a:hover, 
+.mask-section-light a:active {
+    color: #333333;
+}
+.mask-section-dark a:link,
+.mask-section-dark a:visited,
+.mask-section-dark a:hover, 
+.mask-section-dark a:active {
+    color: white;
+}
+
+
+.hidden {
+    opacity: 0;
+}
+
+@keyframes slideup {
+    0% {
+        opacity: 0;
+        transform: translateY(2em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0em);
+    }
+}
+
+.slideup-0 {
+    opacity: 0;
+    animation: slideup 0.5s ease-out 0s forwards;
+}
+.slideup-1 {
+    opacity: 0;
+    animation: slideup 0.5s ease-out 1s forwards;
+}
+.slideup-2 {
+    opacity: 0;
+    animation: slideup 0.5s ease-out 2s forwards;
+}
+.slideup-3 {
+    opacity: 0;
+    animation: slideup 0.5s ease-out 3s forwards;
+}
+.slideup-4 {
+    opacity: 0;
+    animation: slideup 0.5s ease-out 4s forwards;
+}
+
+.flex-1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow-x: hidden;
+}
+.flex-2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow-x: hidden;
+}
+
+.align-left {
+    text-align: left;
+}
+.align-right {
+    text-align: right;
+}
+
+.flex-1>* {
+    width: 80%;
+    display: block;
+    padding: 1em;
+}
+.flex-2>* {
+    width: 16em;
+    display: block;
+    padding: 1em;
+}
+
+.blank {
+    height: 10em;
+}
+
+.circle {
+    border-radius: 50%;
+    padding: 1em;
+}
+.circle>img {
+    width: 12em;
+    height: 12em;
+}
+
+.wide {
+    width: 24em;
+}
+.wide>img {
+    width: 24em;
+}
+
+.big-text {
+    font-size: 1.8em;
+    width: 18em;
+    padding: 2em 0;
+}
+p {
+    padding: 0;
+    margin: 0;
+}
+p.title {
+    font-weight: bold;
+}
+p.title::before {
+    content: '>> ';
+    position: relative;
+    right: 1.5em;
+    width: 0;
+    display: inline-block;
+}
+
+.paddings {
+    padding: 2em;
+}
+
+pre.shell {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #33ff33;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 950px) {
+    .circle, .wide {
+        padding: 0;
+        margin: 0;
+    }
+}
