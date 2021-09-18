@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: sans-serif;
+    font-family: 'Noto Sans', 'Segoe UI', sans-serif;
     font-size: 1.2em;
     text-align: center;
     background-color: #8aceff;
@@ -115,6 +115,9 @@ a:link, a:visited, a:hover, a:active {
     justify-content: space-around;
     overflow-x: hidden;
 }
+.flex-direction-reverse {
+    flex-direction: row-reverse;
+}
 
 .align-left {
     text-align: left;
@@ -129,7 +132,7 @@ a:link, a:visited, a:hover, a:active {
     padding: 1em;
 }
 .flex-2>* {
-    width: 16em;
+    width: 18em;
     display: block;
     padding: 1em;
 }
@@ -161,7 +164,7 @@ a:link, a:visited, a:hover, a:active {
 }
 p {
     padding: 0;
-    margin: 0;
+    margin: 8px 0;
 }
 p.title {
     font-weight: bold;
@@ -177,6 +180,9 @@ p.title::before {
 .paddings {
     padding: 2em;
 }
+.margins {
+    margin: 2em;
+}
 
 pre.shell {
     background-color: rgba(0, 0, 0, 0.6);
@@ -185,9 +191,18 @@ pre.shell {
     white-space: pre-wrap;
 }
 
+.highlight {
+    background-color: #725fff;
+    color: white;
+}
+
 footer p {
     font-size: 0.8em;
     color: rgba(0, 0, 0, 0.6);
+}
+
+ul li {
+    list-style-type: square;
 }
 
 @media (max-width: 950px) {
